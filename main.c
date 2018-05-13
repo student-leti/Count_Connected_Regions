@@ -146,7 +146,7 @@ void convertingImageDataBytesToBitArray(unsigned char ucharBuffer[],
 	}
 
 ////////////////////////////////////////////////////////////
-int setRegionColor(/*int xcoord, int ycoord, int label*/)
+int setRegionColor()
 	{
 		
 		return rand()%255;
@@ -296,9 +296,9 @@ int main()
 					intRegionCounter++;
 					pSRegionArray[intRegionCounter] = (struct SRegion*)malloc(4*sizeof(int));
 					pSRegionArray[intRegionCounter]->area = 1;
-					pSRegionArray[intRegionCounter]->ColorRed = setRegionColor(i, j, intRegionCounter);
-					pSRegionArray[intRegionCounter]->ColorGreen = setRegionColor(i, j, intRegionCounter); 
-					pSRegionArray[intRegionCounter]->ColorBlue = setRegionColor(i, j, intRegionCounter);
+					pSRegionArray[intRegionCounter]->ColorRed = setRegionColor();
+					pSRegionArray[intRegionCounter]->ColorGreen = setRegionColor(); 
+					pSRegionArray[intRegionCounter]->ColorBlue = setRegionColor();
 					intBitArray[i][j] = intRegionCounter;
 					moveDown(i, j, intBitArray, intBitArray[i][j], pSRegionArray[intRegionCounter]);
 					moveRight(i, j, intBitArray, intBitArray[i][j], pSRegionArray[intRegionCounter]);
